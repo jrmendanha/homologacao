@@ -1,0 +1,102 @@
+<?php
+
+namespace Application\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TbFuncionario
+ *
+ * @ORM\Table(name="tb_funcionario")
+ * @ORM\Entity
+ */
+class TbFuncionario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_FUNC", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOME_FUNC", type="string", length=100, nullable=false)
+     */
+    private $nomeFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="FUNCAO_FUNC", type="string", length=80, nullable=false)
+     */
+    private $funcaoFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="CPF_FUNC", type="string", length=11, nullable=false)
+     */
+    private $cpfFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="RG_FUNC", type="string", length=15, nullable=false)
+     */
+    private $rgFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ORG_EMISSOR_FUNC", type="string", length=20, nullable=false)
+     */
+    private $orgEmissorFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="USUARIO_FUNC", type="string", length=10, nullable=false)
+     */
+    private $usuarioFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="SENHA_FUNC", type="string", length=10, nullable=false)
+     */
+    private $senhaFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="DIR_FOTO_PF_FUNC", type="string", length=100, nullable=false)
+     */
+    private $dirFotoPfFunc;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="NIVEL_ACESSO_FUNC", type="boolean", nullable=false)
+     */
+    private $nivelAcessoFunc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DATA_ANIVERSARO_FUNC", type="date", nullable=false)
+     */
+    private $dataAniversaroFunc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="SITUACAO_FUNC", type="string", length=1, nullable=false)
+     */
+    private $situacaoFunc;
+
+
+}

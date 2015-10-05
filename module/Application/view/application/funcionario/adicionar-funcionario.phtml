@@ -1,0 +1,90 @@
+<?php echo $this->headScript()->prependFile($this->basePath('js/funcionario/funcionario.js')); ?>
+
+<div class="container">
+    <?php $this->form->prepare(); ?>
+    <?php echo $this->form()->openTag($this->form); ?>
+    <div class="panel panel-default" id="panelAdicionarFuncionario" style="margin-top: 15px;">
+        <div class="panel-heading">Cadastro de Funcionário</div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('nomeFunc')); ?>
+                        <div class="col-sm-10">
+                            <?php echo $this->formInput($this->form->get('nomeFunc')); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('funcaoFunc')); ?>
+                        <div class="col-sm-10">
+                            <?php echo $this->formInput($this->form->get('funcaoFunc')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('rgFunc')); ?>
+                        <div class="col-sm-8">
+                            <?php echo $this->formInput($this->form->get('rgFunc')); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('orgEmissorFunc')); ?>
+                        <div class="col-sm-6">
+                            <?php echo $this->formInput($this->form->get('orgEmissorFunc')); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('cpfFunc')); ?>
+                        <div class="col-sm-10">
+                            <?php echo $this->formInput($this->form->get('cpfFunc')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-1 col-md-2">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                <?php echo $this->formInput($this->form->get('dataAniversaroFunc')); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-group">
+                        <?php echo $this->formLabel($this->form->get('situacaoFunc')); ?>
+                        <?php echo $this->formRadio($this->form->get('situacaoFunc')); ?>
+                        <?php echo $this->formHidden($this->form->get('idFunc')); ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-9 col-md-3">
+                    <div class="pull-right">
+                        <a class="btn btn-default" href="/application/funcionario/index"><i class="fa fa-chevron-left"></i> Cancelar</a>
+                        <?php echo $this->formButton()->openTag($form->get('submit')); ?>
+                        <?php echo '<i class="fa fa-floppy-o"></i>' . $form->get('submit')->getLabel(); ?>
+                        <?php echo $this->formButton()->closeTag(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php echo $this->form()->closeTag(); ?>
+</div>

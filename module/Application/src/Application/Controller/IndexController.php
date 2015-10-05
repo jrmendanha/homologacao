@@ -14,8 +14,20 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    
+    private $_em;
+    
+    private function _getEntityManager(){
+        if(null === $this->_em){
+            $this->_em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        }
+        
+        return $this->_em;
+    }
+    
     public function indexAction()
     {
+//        var_dump($this->getEvent()->getRouteMatch()->getMatchedRouteName());
         return new ViewModel();
     }
 }
